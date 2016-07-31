@@ -4,7 +4,7 @@ class AnnotationsController < ApplicationController
   # GET /annotations
   # GET /annotations.json
   def index
-    @annotations = Annotation.all
+    @annotations = Annotation.all.paginate(:page => params[:page], :per_page => 2)
   end
 
   # GET /annotations/1

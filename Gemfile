@@ -32,12 +32,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-# Gems adicionadas na mão
+# REGION Gems adicionadas na mão
 
-# Gems de Rails Bootstrap
-gem "therubyracer"
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem "twitter-bootstrap-rails"
+  # Twitter Bootstrap for Rails 3.x - 4 Asset Pipeline https://github.com/seyhunak/twitter-bootstrap-rails
+  gem "therubyracer"
+  gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+  gem "twitter-bootstrap-rails"
+  
+  # Pagination library for Rails, Sinatra, Merb, DataMapper, and more http://github.com/mislav/will_paginate/wikis
+  
+  gem 'will_paginate', '~> 3.1.0'
+
+# END REGION
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
