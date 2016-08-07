@@ -18,7 +18,7 @@ class AnnotationsControllerTest < ActionController::TestCase
 
   test "should create annotation" do
     assert_difference('Annotation.count') do
-      post :create, annotation: { body: @annotation.body }
+      post :create, annotation: { body: @annotation.body, friend_id: @annotation.friend_id }
     end
 
     assert_redirected_to annotation_path(assigns(:annotation))
@@ -35,7 +35,7 @@ class AnnotationsControllerTest < ActionController::TestCase
   end
 
   test "should update annotation" do
-    patch :update, id: @annotation, annotation: { body: @annotation.body }
+    patch :update, id: @annotation, annotation: { body: @annotation.body, friend_id: @annotation.friend_id }
     assert_redirected_to annotation_path(assigns(:annotation))
   end
 

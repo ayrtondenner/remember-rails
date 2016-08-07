@@ -4,7 +4,7 @@ class AnnotationsController < ApplicationController
   # GET /annotations
   # GET /annotations.json
   def index
-    @annotations = Annotation.all.paginate(:page => params[:page], :per_page => 2)
+    @annotations = Annotation.all
   end
 
   # GET /annotations/1
@@ -69,6 +69,6 @@ class AnnotationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def annotation_params
-      params.require(:annotation).permit(:body)
+      params.require(:annotation).permit(:body, :friend_id)
     end
 end

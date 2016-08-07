@@ -42,6 +42,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
   # Pagination library for Rails, Sinatra, Merb, DataMapper, and more http://github.com/mislav/will_paginate/wikis
   
   gem 'will_paginate', '~> 3.1.0'
+  
+  # A library for generating fake data such as names, addresses, and phone numbers. - https://github.com/stympy/faker
+  
+  gem 'faker'
 
 # END REGION
 

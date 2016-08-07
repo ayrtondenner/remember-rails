@@ -11,10 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160731025147) do
+ActiveRecord::Schema.define(version: 20160807165553) do
 
   create_table "annotations", force: :cascade do |t|
     t.text     "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "friend_id"
+  end
+
+  add_index "annotations", ["friend_id"], name: "index_annotations_on_friend_id"
+
+  create_table "children", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "father_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "children", ["father_id"], name: "index_children_on_father_id"
+
+  create_table "fathers", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

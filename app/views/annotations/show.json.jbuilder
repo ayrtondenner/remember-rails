@@ -1,1 +1,1 @@
-json.extract! @annotation, :id, :body, :created_at, :updated_at
+json.extract! @annotation, :id, :body, :friend_id, :created_at, :updated_at
