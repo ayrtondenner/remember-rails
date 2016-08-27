@@ -1,10 +1,12 @@
 class AnnotationsController < ApplicationController
   before_action :set_annotation, only: [:show, :edit, :update, :destroy]
+  before_action :set_friends, only: [:new, :update, :index, :edit]
 
   # GET /annotations
   # GET /annotations.json
   def index
     @annotations = Annotation.all
+    # @friends = Friend.all
   end
 
   # GET /annotations/1
@@ -19,6 +21,7 @@ class AnnotationsController < ApplicationController
 
   # GET /annotations/1/edit
   def edit
+    # @friends = Friend.all
   end
 
   # POST /annotations
@@ -65,6 +68,10 @@ class AnnotationsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_annotation
       @annotation = Annotation.find(params[:id])
+    end
+    
+    def set_friends
+      @friends = Friend.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

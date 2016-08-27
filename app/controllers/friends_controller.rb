@@ -10,6 +10,7 @@ class FriendsController < ApplicationController
   # GET /friends/1
   # GET /friends/1.json
   def show
+    @Annotation = Annotation
   end
 
   # GET /friends/new

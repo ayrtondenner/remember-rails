@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development # Mudança feita, sqlite para desenvolvimento e PostGree para produção com o Heroku
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -40,12 +40,14 @@ gem 'sdoc', '~> 0.4.0', group: :doc
   gem "twitter-bootstrap-rails"
   
   # Pagination library for Rails, Sinatra, Merb, DataMapper, and more http://github.com/mislav/will_paginate/wikis
-  
   gem 'will_paginate', '~> 3.1.0'
   
   # A library for generating fake data such as names, addresses, and phone numbers. - https://github.com/stympy/faker
-  
   gem 'faker'
+  
+  # Makes running your Rails app easier - https://github.com/heroku/rails_12factor (Gem requerida pelo Heroku)
+  gem 'rails_12factor', group: :production
+  gem 'pg', group: :production
 
 # END REGION
 
@@ -62,3 +64,4 @@ group :development do
   gem 'spring'
 end
 
+ruby '2.3.0'
