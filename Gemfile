@@ -47,7 +47,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
   
   # Makes running your Rails app easier - https://github.com/heroku/rails_12factor (Gem requerida pelo Heroku)
   gem 'rails_12factor', group: :production
-  gem 'sqlite3', group: :production
+  gem 'pg', group: :production
 
 # END REGION
 
