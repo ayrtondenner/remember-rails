@@ -16,8 +16,8 @@
     <% @annotations.each do |annotation| %>
       <tr>
         <td><%= link_to annotation.id, annotation_path(annotation) %></td>
-        <td><%= annotation.body_blank %></td>
-        <td><%= @friends.find(annotation.friend_id).name %></td>
+        <td><%= annotation.show_body %></td>
+        <td><%= annotation.show_friend_name %></td>
         <td><%=l annotation.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

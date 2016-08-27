@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(version: 20160807165553) do
 
   create_table "annotations", force: :cascade do |t|
     t.text     "body"
+    t.integer  "friend_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer  "friend_id"
   end
 
   add_index "annotations", ["friend_id"], name: "index_annotations_on_friend_id"

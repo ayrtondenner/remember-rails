@@ -7,7 +7,7 @@
   <dt><strong><%= model_class.human_attribute_name(:body) %>:</strong></dt>
   <dd><%= @annotation.body %></dd>
   <dt><strong><%= model_class.human_attribute_name(:friend) %>:</strong></dt>
-  <dd><%= @annotation.friend.name %></dd>
+  <dd><%= @annotation.show_friend_name %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
